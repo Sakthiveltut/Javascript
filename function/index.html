@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <div id="d"></div>
+    <script>
+
+        function add()
+        {
+            let a = 10;
+            let b = 20;
+            let c = a+b;
+            document.getElementById('a').innerHTML=c;
+        }
+        add()
+
+        var sub=function(){
+            let a = 10;
+            let b = 20;
+            let c = a-b;
+            document.getElementById('b').innerHTML=c;
+        
+        }
+        sub()
+
+        var mul=() =>{
+            let a = 10;
+            let b = 20;
+            let c = a*b;
+            document.getElementById('c').innerHTML=c;
+        }
+        mul()
+
+        var div=(x) =>{
+            let a = 10;
+            let b = 20;
+            let c = a*x;
+            document.getElementById('d').innerHTML=c;
+        }
+        div(5)
+        
+    </script>
+</body>
+</html>
