@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a"></div>
+</body>
+    <script>
+        class cal{
+            add(){
+                let a=10;
+                let b=20;
+                let c=a+b;
+                document.getElementById('a').innerHTML=c;
+            }
+            sub(){
+                let a=10;
+                let b=20;
+                let c=a-b;
+                document.getElementById('a').innerHTML=c;
+            }
+        }
+        var total = new cal();
+        total.add();
+        total.sub();
+    </script>
+</html>
