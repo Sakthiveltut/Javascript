@@ -6,18 +6,19 @@
     <title>Regular Function</title>
 </head>
 <body>
-    <button type='btn'>Click Me</button>
-    <h1 id='myHeading'>Its heading tag</h1>
+    <button type='button' id="btn">Click Me</button>
+    <h1 id='myHeader'>Its heading tag</h1>
     <div id='myDiv'>div</div>
     <p id='demo'></p>
 
 <script>
     class RegularF{
-        changeColor = function(){
+        changeColor = ()=>{
             document.getElementById("demo").innerHTML+=this;
         }
     }
     var regularF = new RegularF();
+
     window.addEventListener("load", regularF.changeColor);
 
     document.getElementById('btn').addEventListener('click',regularF.changeColor);
