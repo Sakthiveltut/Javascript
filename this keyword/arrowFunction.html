@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Function</title>
+</head>
+<body>
+    <button type='btn'>Click Me</button>
+    <h1 id='myHeading'>Its heading tag</h1>
+    <div id='myDiv'>div</div>
+    <p id='demo'></p>
+
+<script>
+    class RegularF{
+        changeColor = function(){
+            document.getElementById("demo").innerHTML+=this;
+        }
+    }
+    var regularF = new RegularF();
+    window.addEventListener("load", regularF.changeColor);
+
+    document.getElementById('btn').addEventListener('click',regularF.changeColor);
+    document.getElementById('myHeader').addEventListener('click',regularF.changeColor);
+    document.getElementById('myDiv').addEventListener('click',regularF.changeColor);
+</script>
+
+</body>
+</html>
