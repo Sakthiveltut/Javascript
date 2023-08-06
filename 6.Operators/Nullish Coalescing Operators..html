@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalescing Operators</title>
+</head>
+<body>
+    <script>
+//Nullish coalescing operator (??)
+
+const a=null??'No Value';
+console.log(a);
+
+const b=null??45;
+console.log(b);
+
+//??=
+const user={'name':'joes'};
+console.log(user);
+console.log(user.name);
+
+user.city??='Salem';
+console.log(user.city);
+console.log(user);        
+    </script>
+</body>
+</html>

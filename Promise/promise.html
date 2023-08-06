@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        let developer = false;
+
+        let promise = new Promise((myResolve,myReject)=>{
+            if(developer){
+                myResolve("The project is successfully completed")
+            }
+            else{
+                myReject("The project is not completed")
+            }
+        });
+
+        promise.then((successMSG)=>{
+            console.log(successMSG)
+        }).catch((failedMSG)=>{
+            console.log(failedMSG)
+        }).finally(()=>{
+            console.log("The program has ended")
+        })
+    </script>
+</body>
+</html>

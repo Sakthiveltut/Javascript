@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    <script>
+
+let full_name="Sakthi vel";
+let age="12";
+let city="Salem";
+let role="Web Developer";
+
+let output="";
+output="<table border='1'><tr><th>Name</th><td>"+full_name+
+    "</td></tr><tr><th>Age</th><td>"+age+
+        "</td></tr><tr><th>City</th><td>"+city+
+            "</td></tr><tr><th>Role</th><td>"+role+
+                "</td></tr></table>";
+
+
+//es5
+output+="<hr><table border='1'>"+
+"<tr><th>Name</th><td>"+full_name+"</td></tr>"+
+"<tr><th>Age</th><td>"+age+"</td></tr>"+
+"<tr><th>City</th><td>"+city+"</td></tr>"+
+"<tr><th>Role</th><td>"+role+"</td></tr>"+
+"</table>";
+
+
+//es6
+output+=`<hr>
+<table border='1'>
+  <tr><th>Name</th><td>${full_name}</td></tr>
+  <tr><th>Age</th><td>${age>=25?"Good":"Bad"}</td></tr>
+  <tr><th>City</th><td>${city}</td></tr>
+  <tr><th>Role</th><td>${role}</td></tr>
+</table>`;
+document.writeln(output)
+    </script>
+</body>
+</html>

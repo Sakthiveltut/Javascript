@@ -1,0 +1,12 @@
+<script>
+    function userInput(callback){
+        const data = prompt("Enter your name: ")
+        callback(data)
+    }
+    function display(data){
+        alert(`Name : ${data}`)
+        document.write("<h1>Name &#8594 "+data+"</h1>")
+    }
+    userInput(display)
+
+</script>

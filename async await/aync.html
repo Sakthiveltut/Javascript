@@ -1,0 +1,37 @@
+<script>
+
+    document.write("async & await")
+
+    let promise = new Promise((Resolve,Reject)=>{
+        setTimeout(()=>{
+            let user = {Name:"Sakthi",Address:"Chennai"}
+            if(Object.keys(user)!==0){
+                Resolve(user);
+            }else{
+                Reject(user)
+            }
+        },3000);
+    });
+
+   async function getData(){
+    let userData = await promise;
+    console.log(userData)
+    console.log(userData.Name)
+    console.log(userData.Address)
+
+/*        try{
+            let userData = await promise;
+            console.log(userData)
+        }
+        catch(e){
+            console.log(e)
+        }
+*/
+
+    }
+    getData().then(()=>{
+        console.log("The program is executed successfully")
+    }).catch(()=>{
+        console.log("The program is not executed")
+    })
+</script>

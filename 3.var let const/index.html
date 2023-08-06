@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let const</title>
+</head>
+<body>
+    <script>
+        document.write("<h3>var let const :</h3>")
+var v = 10
+let l = 20
+const c = 30
+if(true)
+{
+    var v1 = 40
+    let l1 = 50
+    const c1 = 60
+    document.write("v : "+v+"<br> l :"+l+"<br> c :"+c);
+    v = 100
+    l = 200
+    // c = 30
+    // c = 300
+    document.write("<br> Redeclared v : "+v)
+    document.write("<br> Redeclared l : "+l)
+    document.write("<br> Redeclared c : "+c)
+
+}
+document.write("<br>v1 : "+v1)
+document.write("<br> Redeclared v : "+v)
+
+document.write("<hr>")
+    </script>
+</body>
+</html>
