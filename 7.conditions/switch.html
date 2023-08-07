@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+<body>
+        <input type="text" id="userInput" >
+        <button onclick="checkVowel()">click</button>
+        <div id="result"></div>
+    <script>
+        function checkVowel(){
+        var letter = document.getElementById("userInput").value   
+        var result = document.getElementById("result")
+        switch(letter){
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+            case "A":
+            case "E":
+            case "I":
+            case "O":
+            case "U": 
+            result.innerHTML  = letter+" is a Vowel"
+                break
+            default:
+            result.innerHTML  = letter+" is not a vowel"
+                break
+        }
+    }
+    </script>
+</body>
+</html>

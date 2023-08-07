@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested If Statement</title>
+</head>
+<body>
+    <form action="" onsubmit="result()">
+        <input type="text" id="english"><br><br><br>
+        <input type="text" id="tamil"><br><br><br>
+        <input type="text" id="maths"><br><br><br>
+        <input type="submit">
+    </form>    
+
+
+<script>
+
+function result(){
+const english = document.getElementById("english").value
+const tamil = document.getElementById("tamil").value
+const maths = document.getElementById("maths").value
+let total,avg;
+total=Number(english)+Number(tamil)+Number(maths);
+avg=total/3;
+document.writeln("<br>"+"Total   : "+total);
+document.writeln("<br>"+"Average : "+avg.toFixed(2));
+
+if(english>=35 && tamil>=35 && maths>=35)
+{
+  document.writeln("<br>"+"Result  : Pass");
+  if(avg>90 && avg<=100){
+    document.writeln("<br>"+"Grade   : A Grade");
+  }else if(avg>80 && avg<=90){
+    document.writeln("<br>"+"Grade   : B Grade");
+  }else if(avg>70 && avg<=80){
+    document.writeln("<br>"+"Grade   : C Grade");
+  }else{
+    document.writeln("<br>"+"Grade   : D Grade");
+  }
+}
+else
+{
+  document.writeln("<br>"+"Result  : Fail");
+  document.writeln("<br>"+"Grade   : No Grade");
+}
+}
+    </script>
+</body>
+</html>

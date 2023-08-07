@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        //for(let i=0;i<=100;i++){
+            //document.writeln("<br>"+i)
+        //}
+
+        var arr = [];
+        for(let i=0;i<=100;i+=3){
+            arr.push(i)
+        }
+        //document.writeln("<br>"+arr)
+        //document.writeln("<br>"+arr[50])
+
+        //For Of Loop
+
+        for(let ar of arr){
+            document.writeln("<br>"+ar)
+        }
+
+        //For in Loop
+        let user = {
+            name: "sakthi vel",
+            age: 21,
+            city: "Salem",
+            contact: "9043017689",
+          };
+          
+          for(let prop in user)
+          {
+            document.writeln("<br>"+prop+" : "+user[prop]);
+            document.writeln("<br>"+prop)
+          }
+
+
+          let student = {
+            name: "Sakthi vel",
+            age: 21,
+            city: "Salem",
+            contact: "9043017689",
+          };
+          
+          let arr_keys=Object.keys(student);
+          console.table(arr_keys);
+          
+          let arr_values=Object.values(student);
+          console.table(arr_values);
+          
+          for(let i=0;i<arr_keys.length;i++)
+          {
+            console.log(arr_keys[i]+" : "+arr_values[i]);
+            //console.log(user[arr_keys[i]]);
+          }
+
+    </script>
+</body>
+</html>
