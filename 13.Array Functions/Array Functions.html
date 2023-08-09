@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+<body>
+    <script>
+        const number=[1,2,30,4,5,6,7,8,9,10];
+
+//for Each(value,index,array)
+number.map((value)=>{
+  console.log(value);
+});
+
+number.map((index,value)=>{
+  console.log("Index : "+index+" Value: "+value);
+});
+
+const users =[
+  {full_name:"Ram",age:12,city:"Salem",salary:10000},
+  {full_name:"Sam",age:15,city:"Chennai",salary:10500},
+  {full_name:"Ravi",age:22,city:"Namakkal",salary:12000},
+  {full_name:"Joes",age:18,city:"Hosur",salary:6000},
+  {full_name:"Aureen",age:47,city:"Dharmapuri",salary:10000},
+  {full_name:"Stanley",age:10,city:"Salem",salary:8000},
+];
+
+console.table(users);
+
+users.map((value)=>{
+  console.log(value.full_name);
+});
+
+
+//-----------------------------------------------------------------
+
+const numbers=[10,20,30,40,50,60,70,80,90,100];
+
+//map(value,index,array)
+let sqrt=numbers.map((value)=>{
+    return Math.sqrt(value).toFixed(2);
+});
+
+console.table(sqrt);
+
+console.table(users);
+
+let eligible_status=users.map((user)=>({
+  /*name:user.name,
+  age:user.age,
+  city:user.city,
+  salary:user.salary,*/
+  ...user,
+  status:user.age>=18?"Eligible":"Not Eligible"
+}));
+
+console.table(eligible_status);
+
+console.log(...users)
+
+//-----------------------------------------------------------------
+
+
+//slice(start,end)
+console.log(numbers);
+console.log("Slice :"+numbers.slice());
+console.log("Slice(2) :"+numbers.slice(2));
+console.log("Slice(2,5) :"+numbers.slice(2,5));
+console.log(numbers)
+
+//-----------------------------------------------------------------
+//splice(start,length,new elements)
+const n1=[1,2,3,4,5,6,7,8,9,10];
+
+console.log("Before Splice : "+n1);
+let removed_elements=n1.splice(2);
+console.log("Removed Items : "+removed_elements);
+console.log("After Splice :"+n1);
+
+
+const n2=[1,2,3,4,5,6,7,8,9,10];
+console.log("Before Splice : "+n2);
+removed_elements=n2.splice(2,2);
+console.log("Removed Items : "+removed_elements);
+console.log("After Splice :"+n2);
+
+
+const n3=[1,2,3,4,5,6,7,8,9,10];
+console.log("Before Splice : "+n3);
+removed_elements=n3.splice(2,2,[25,36,45]);
+console.log("Removed Items : "+removed_elements);
+console.log(n3);
+
+const n4=[1,2,3,4,5,6,7,8,9,10];
+console.log("Before Splice : "+n4);
+
+n4.splice(2,0,100,300);
+console.log("After Splice :"+n4);
+
+//-----------------------------------------------------------------
+//concat
+const a=[10,20,30];
+const b=[40,50,60];
+const c=[70,80,90];
+
+let d=a.concat(b);
+console.log(d);
+
+d=a.concat(b,c);
+console.log(d);
+
+d=a.concat(b,c,25,35,45,55);
+console.log(d);
+
+d=a.concat(b,c,25,35,45,55,['a','b','c']);
+console.log(d);
+
+console.table(d);
+
+
+
+//-----------------------------------------------------------------
+//sort()
+
+const names=["Kumar","Aureen","Joes","Zara","Stanley"];
+console.log("Before Sort : "+names);
+names.sort();
+console.log("After Sort : "+names);
+
+const num=[10,100,25,150,45,80,9];
+console.log("Before Sort : "+num);
+num.sort();
+console.log("After Sort : "+num);
+
+num.sort((a,b)=>{
+  return a-b;
+});
+console.log("Asc Compare Sort : "+num);
+
+num.sort((a,b)=>{
+  return b-a;
+});
+console.log("Desc Compare Sort : "+num);
+
+
+/*const users =[
+  {full_name:"Ram",age:12,city:"Salem",salary:10000},
+  {full_name:"Sam",age:15,city:"Chennai",salary:10500},
+  {full_name:"Ravi",age:22,city:"Namakkal",salary:12000},
+  {full_name:"Joes",age:18,city:"Hosur",salary:6000},
+  {full_name:"Aureen",age:47,city:"Dharmapuri",salary:10000},
+  {full_name:"Stanley",age:10,city:"Salem",salary:8000},
+];*/
+
+
+console.table(users);
+
+users.sort((a,b)=>{
+  return a.age-b.age;
+});
+console.table(users);
+
+users.sort((a,b)=>{
+  if(a.full_name>b.full_name) return 1;
+  if(a.full_name<b.full_name) return -1;
+  return 0;
+});
+
+console.table(users);
+
+    </script>
+</body>
+</html>
+
