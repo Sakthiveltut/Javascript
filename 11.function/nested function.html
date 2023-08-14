@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested function</title>
+</head>
+<body>
+    <script>
+        function outerFunction() {
+            let outerVariable = 'I am a variable in the outer function';
+          
+            function innerFunction() {
+              let innerVariable = 'I am a variable in the inner function';
+              console.log(outerVariable); // Output: "I am a variable in the outer function"
+              console.log(innerVariable); // Output: "I am a variable in the inner function"
+            }
+            innerFunction();
+          
+          }
+          
+          outerFunction();
+
+    </script>
+</body>
+</html>

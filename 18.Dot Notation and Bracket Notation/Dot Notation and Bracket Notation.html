@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Notation and Bracket Notation</title>
+</head>
+<body>
+    <script>
+        const user = {
+            name: "sakthi vel",
+            age: 30,
+            job: "Developer"
+        };
+        
+        // Dot notation
+        console.log(user.name); 
+        user.name = "sakthi";
+        console.log(user.name); 
+        
+        // Bracket notation
+        console.log(user["age"]); // Output: 30
+        user["age"] = 25;
+        console.log(user["age"]); // Output: 25
+
+        const prop = "name";
+        console.log(user[prop]);
+        
+        
+        let user1 = {
+            "first name": "sakthi",
+            "last name": "vel"
+            };
+
+        console.log(user1["first name"]);
+        console.log(user1["last name"]);
+
+        let key = "first name"
+        console.log(user1.key) //undefined
+        console.log(user1[key])
+    </script>
+</body>
+</html>

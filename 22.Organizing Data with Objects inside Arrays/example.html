@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizing Data with Objects inside Arrays</title>
+</head>
+<body>
+    <script>
+        const users = [
+        { name: 'joes', age: 25, email: 'joes@gmail.com' },
+        { name: 'ram', age: 32, email: 'ram@gmail.com' },
+        { name: 'sam', age: 45, email: 'sam@gmail.com' }
+    ];
+
+    for (let user in users){
+        console.log(users[user])
+    }
+    for (let user in users){
+        console.log(users[user].name)
+    }
+
+    for (let user of users){
+        console.log(user)
+    }
+    for (let user of users){
+        console.log(user.name)
+    }
+    const olderUsers = users.filter(user =>user.age> 30);
+    console.log(olderUsers);
+    </script>
+</body>
+</html>

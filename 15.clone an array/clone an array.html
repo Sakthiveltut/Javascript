@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone an array</title>
+</head>
+<body>
+    <script>
+        let originalArray = [1, 2, 3];
+
+//Spread operator:
+let clonedArray1 = [...originalArray];
+console.log(clonedArray1); 
+
+//slice() method:
+let clonedArray2 = originalArray.slice();
+console.log(clonedArray2);
+
+//concat() method:
+let clonedArray3 = [].concat(originalArray);
+console.log(clonedArray3);  // [1, 2, 3]
+
+//Array.from() method: 
+let clonedArray4 = Array.from(originalArray);
+console.log(clonedArray4);
+
+//JSON.parse() and JSON.stringify():
+let clonedArray5 = JSON.parse(JSON.stringify(originalArray));
+console.log(clonedArray5);
+    </script>
+</body>
+</html>

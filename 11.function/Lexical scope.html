@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical scope</title>
+</head>
+<body>
+    <script>
+        let globalVariable = 'I am a global variable';
+
+    function outerFunction() {
+      var outerVariable = 'I am a variable in the outer function';
+
+      function innerFunction() {
+        var innerVariable = 'I am a variable in the inner function';
+        console.log(globalVariable); // Output: "I am a global variable"
+        console.log(outerVariable); // Output: "I am a variable in the outer function"
+        console.log(innerVariable); // Output: "I am a variable in the inner function"
+      }
+
+    innerFunction();
+    }
+    outerFunction();
+
+    console.log(globalVariable);
+    //console.log(outerVariable);
+
+    if(true){
+        var hello = "hello"
+    }
+    console.log(hello);
+    </script>
+</body>
+</html>

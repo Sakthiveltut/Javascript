@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function hoisting</title>
+</head>
+<body>
+    <script>
+        display1()
+        function display1(){
+            console.log("display1");
+        }
+
+        const display2 = ()=>{
+            console.log("display2");
+        }
+        display2()
+        
+        const display3 = function(){
+            console.log("display3");
+        }
+        display3()
+    </script>
+</body>
+</html>

@@ -170,7 +170,186 @@ users.sort((a,b)=>{
 
 console.table(users);
 
+
+//-----------------------------------------------------------------
+//Fill(value,start,end)
+
+let n=[1,2,3,4,5,6]
+
+console.log("Before Fill : "+n);
+//n.fill(20);
+//n.fill(20,3)
+n.fill(20,3,5);
+console.log("After Fill  : "+n);
+
+
+//-----------------------------------------------------------------
+//Includes(value,start_index)
+const products = ["Pen", "Pencil", "Eraser", "Box", "Pen"];
+let result = products.includes("Pen");
+console.log(result);
+result = products.includes("Scale");
+console.log(result);
+result = products.includes("Pencil", 1);
+console.log(result);
+
+//-----------------------------------------------------------------
+//array.join(separator)
+
+console.log(products);
+
+console.log(products.join()); //Deafult , as Separator
+console.log(products.join('|')); // Pipe | as Separator
+
+//-----------------------------------------------------------------
+//reverse()
+
+console.log("Before Reverse : ", n);
+n.reverse();
+console.log("After Reverse : ", n);
+
+//Array Element With Length Property
+const x = { 0: 10, 1: 20, 2: 30, 3: 40, length: 4 };
+console.log(x);
+
+Array.prototype.reverse.call(x);
+console.log(x);
+
+//-----------------------------------------------------------------
+//push()
+
+console.log(n);
+console.log(n.push(60));
+console.log(n);
+console.log(n.push(70, 85, 90, 100));
+console.log(n);
+
+let fruits = ["Apple"]
+console.log(fruits);
+fruits.push("Orange");
+console.log(fruits);
+fruits.push("Banana", "Pineapple");
+console.log(fruits);
+
+//Merging Two Arrays
+let users1 = ["Ram", "Sam", "Ravi"];
+let users2 = ["Rajesh", "Kumar"];
+
+users1.push(...users2);
+console.log(users1);
+
+//-----------------------------------------------------------------
+//Shift()
+
+let students = ["Kumar", "Aureen", "Joes", "Zara", "Stanley", "Rajesh"];
+
+console.log("Before shift : " + students);
+let element = students.shift();
+console.log(students.shift())
+console.log("After shift : " + students);
+console.log("Removed Element : " + element);
+
+console.log("Before shift : " + students);
+element = students.shift();
+console.log("After shift : " + students);
+console.log("Removed Element : " + element);
+
+
+//-----------------------------------------------------------------
+//Unshift()
+// Add First element at start
+students = ["Kumar", "Aureen", "Joes", "Zara", "Stanley", "Rajesh"];
+console.log("Before unshift : " + students)
+
+let len = students.unshift("Tiya");
+console.log("Length : " + len)
+console.log("After unshift : " + students)
+
+//Mulitiple Values
+len = students.unshift("Riya", "Diya");
+console.log("Length : " + len);
+console.log("After unshift : " + students);
+
+
+//-----------------------------------------------------------------
+//indexOf()
+students = ["Tiya", "Aureen", "Joes", "Zara", "Stanley", "Rajesh"];
+
+let i=students.indexOf("Tiya");
+console.log("Index : "+i);
+
+let user="sakthi vel";
+let index=user.indexOf(" ");
+console.log("Index : "+index);
+
+index=user.indexOf("i",5);
+console.log("Index : "+index);
+
+
+//-----------------------------------------------------------------
+//lastIndexOf()
+
+
+students = ["Tiya", "Aureen", "Joes", "Zara", "Stanley","Tiya", "Rajesh"];
+
+i=students.indexOf("Tiya");
+console.log(i);
+i=students.lastIndexOf("Tiya");
+console.log(i);
+
+let address="Tutor Joes Cherry Road Salem Joes";
+i=address.indexOf("Joes");
+console.log(i);
+i=address.lastIndexOf("Joes");
+console.log(i);
+
+//-----------------------------------------------------------------
+//every() & some()
+
+n = [12, 18, 10, 8];
+
+ result=n.every((value)=>{
+  console.log(value)
+  return value%2==0;
+});
+
+console.log("All Elements are Even :" ,result);
+
+result=n.some((value)=>{
+  return value%2==0;
+});
+
+console.log("All Elements are Even :" ,result);
+
+
+function checkEven(value) {
+  return value % 2 == 0;
+}
+
+result=n.every(checkEven);
+
+console.log("checkEven All Elements are Even :" ,result);
+
+
+ users = [
+  { name: "Ram", age: 25},
+  { name: "Tiya", age: 45},
+  { name: "Raja", age: 18},
+  { name: "Sara", age: 12}
+];
+
+function isEligible(element) {
+  return element.age>=18;
+}
+
+result = users.every(isEligible);
+console.log("Every Eligible :" , result);
+
+result = users.some(isEligible);
+console.log("Some Eligible :" , result);
+
+
+
     </script>
 </body>
 </html>
-

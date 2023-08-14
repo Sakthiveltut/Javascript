@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow functions</title>
+</head>
+<body>
+    <script>
+        //1. Using arrow functions with map():
+        let a = [1,2,3,4,55,5]
+        a.map((a)=>{console.log(a)})
+        
+        //2. Using arrow functions with filter():
+        let fruits = ["apple","banana","orange","mango"]
+        let filterWord1 = fruits.filter((word)=>word.length>5)
+
+        let filterWord2 = fruits.filter((word)=>{
+            word.length>5
+        })
+        console.log(filterWord1)
+        console.log(filterWord2)
+
+        //3. Using arrow functions with reduce():
+        let total = a.reduce((sum,number)=>sum += number,0)
+        console.log(total);
+
+        //4. Using arrow functions to create a closure:
+        let total1 = ()=>{
+            let count = 0
+            return ()=>{
+                count++
+                return count
+            }
+        }
+        console.log(total1);
+        console.log(total1());
+
+        let counter = total1()
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+
+        //Default Parameter Function
+        function addition(a,b=5)
+        {
+            return a+b;
+        }
+        console.log(addition(25,30));
+        console.log(addition(25));
+    </script>
+</body>
+</html>

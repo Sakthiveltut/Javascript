@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope and Function Scope</title>
+</head>
+<body>
+    <h3>JavaScript has two types of scope: block scope and function scope</h3>
+    <script>
+        //1.Block scope 
+        if (true) {
+            let blockScopeVariable = 'I am a variable with block scope';
+            console.log(blockScopeVariable); // Output: "I am a variable with block scope"
+          }
+          //console.log(blockScopeVariable); // ReferenceError: blockScopeVariable is not defined
+          
+        //2.Function scope
+        function myFunction1() {
+            var functionScopeVariable = 'I am a variable with function scope';
+            console.log(functionScopeVariable); // Output: "I am a variable with function scope"
+          }
+          //console.log(functionScopeVariable); // ReferenceError: functionScopeVariable is not defined
+          
+          function myFunction2() {
+            if(true){
+              let fullname="sakthi";
+              console.log(fullname);
+            }
+            //console.log(fullname); //show error 
+          }
+          myFunction2()
+
+          function myFunction3() {
+            if(true){
+              var fullname="sakthi";
+              console.log(fullname);
+            }
+            console.log(fullname);
+          }
+          myFunction3()
+    </script>
+</body>
+</html>

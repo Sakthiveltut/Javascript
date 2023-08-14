@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Objects</title>
+</head>
+<body>
+    <script>
+        //1.Using object literals:
+        const person1 = {
+            name: "John",
+            age: 30,
+            job: "Developer"
+        };
+        console.log(person1);
+
+        //2.Using the object constructor:
+        const person2 = new Object();
+        person2.name = "John";
+        person2.age = 30;
+        person2.job = "Developer";
+        console.log(person2);
+
+        //3. Using the Object.create() method:
+        const display = { sayHello:function(){console.log(`Hello my name is ${this.name}`)}
+        }
+
+        const obj = Object.create(display)
+        obj.name = "Sakthi"
+        obj.age = 21
+        obj.role = "developer"
+
+        console.log(obj)
+        console.log(display.sayHello())
+
+        //4.Using class:
+        class person3{
+            constructor(name,age,role){
+                this.name = name
+                this.age = age
+                this.role = role
+            }
+        }
+        const p = new person3("sakthi",21,"developer")
+        console.log(p)
+    </script>
+</body>
+</html>
+
+

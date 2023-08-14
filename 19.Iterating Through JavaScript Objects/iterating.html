@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterating Through JavaScript Objects</title>
+</head>
+<body>
+    <script>
+        //1: Using the for-in loop
+        const users = {
+            name : "sakthi",
+            age : 21,
+            job : "developer"
+        }
+        for (let key in users){
+            console.log(`${key}:${users[key]}`)
+        }
+
+        //2: Using Object.keys()
+        const keys = Object.keys(users)
+        keys.forEach((key)=>{
+            console.log(`${key}:${users[key]}`)
+        })
+        for (let i=0;i<keys.length;i++){
+           console.log(`${keys[i]}:${users[keys[i]]}`)
+        }
+
+        //3: Using Object.values()
+        const values = Object.values(users)
+        values.forEach((value)=>{
+            console.log(value)
+        })
+
+        //4: Using Object.entries()
+        const entries = Object.entries(users)
+        entries.forEach((entry)=>{
+            console.log(`${entry[0]}:${entry[1]}`)
+        })
+        for(let i=0;i<entries.length;i++){
+            console.log(`${entries[i][0]}:${entries[i][1]}`)
+        }
+
+
+    </script>
+</body>
+</html>
