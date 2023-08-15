@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal Notation</title>
+</head>
+<body>
+    <script>
+        const student = {
+            fullName: "Ram",
+              father: "Sam",
+              age: 12,
+              address: "cherry road",
+              city: "salem",
+              about: function () {
+                return `${this.fullName} is from ${this.city}`;
+              },
+              eligibility: function () {
+                return this.age>= 18;
+              },
+            };
+
+            console.log(student);
+            console.log(student.about());
+            console.log(student.eligibility());
+    </script>
+</body>
+</html>

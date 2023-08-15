@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Inside Object</title>
+</head>
+<body>
+    <script>
+        const object = {
+            method: function() {
+        console.log("Hello, I'm a method!");
+            }
+        };
+        
+        object.method();
+
+        //shorthand notation
+        const obj1 = {
+            method1(){
+                console.log("method1");
+            }
+        }
+        obj1.method1()
+
+        //arrow function notation
+        const obj2 = {
+            method: () => {
+        console.log("Hello, I'm a method!");
+            }
+        };
+        
+        obj2.method();
+
+
+
+        function checkEligiblity(){
+            if(this.age>=18){
+                console.log(`${this.firstname} age is ${this.age} eligible for vote`);
+            }else{
+                console.log(`${this.firstname} age is ${this.age} not eligible for vote`);
+            }
+        }
+        
+        const user1={
+            firstname:"Joes",
+            age:35,
+            eligiblity:checkEligiblity
+        }
+        user1.eligiblity();
+        const user2={
+            firstname:"Sara",
+            age:12,
+            eligiblity:checkEligiblity
+        }
+        user2.eligiblity();
+    </script>
+</body>
+</html>

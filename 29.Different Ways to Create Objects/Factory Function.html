@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function</title>
+</head>
+<body>
+    <script>
+
+        const studentMethod = {
+            about: function () {
+                document.write(`${this.fullName} is from ${this.city}`);
+              return `${this.fullName} is from ${this.city}`;
+            },
+            eligibility: function () {
+                document.write(this.age>= 18);
+              return this.age>= 18;
+            },
+          };
+          
+          function addStudent(fullName, father, age, address, city) {
+            const user = {};
+          user.fullName = fullName;
+          user.father = father;
+          user.age = age;
+          user.age = age;
+          user.address = address;
+          user.city = city;
+          user.about = studentMethod.about;
+          user.eligibility = studentMethod.eligibility;
+            return user;
+          }
+          console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem"))
+          console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem").about());
+          console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem").eligibility());
+          
+          //method 1
+          function createPerson1(){
+            let person = {
+                name:"sakthi",
+                greeting:function(){
+                    let msg = `My name is ${this.name}`
+                    console.log(msg);
+                }
+            }
+            return person;
+          }
+          createPerson1().greeting()
+
+          //method 2
+          function createPerson2(name){
+            return {
+                name:name,
+                greeting:function(){
+                    let msg = `My name is ${this.name}`
+                    console.log(msg);
+                }
+            }
+          }
+          const sakthi = createPerson2("sakthi")
+          sakthi.greeting()
+
+
+          //method 3 factory function
+          function createPerson3(name){ //camelcase
+            return {
+                name,
+                greeting(){
+                     console.log(`My name is ${this.name}`)
+                }
+            }
+          }
+          const raja = createPerson3("raja")
+          raja.greeting()
+
+
+          //constructor function 
+          function Person(name){ //pascal
+            this.name = name
+            this.greeting = ()=>{
+                console.log(`My name is ${this.name}`);
+            }
+          }
+          let person1 = new Person("sakthi")
+          person1.greeting()
+    </script>
+</body>
+</html>

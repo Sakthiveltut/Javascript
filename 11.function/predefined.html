@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predefined</title>
+</head>
+<body>
+    <script>
+        //forEach()
+    const namesList = ['John', 'Mike', 'Bob', 'Jane'];
+    namesList.forEach((name, index) => {
+    namesList[index] = name.toUpperCase();
+    });
+    console.log(namesList); // ['JOHN', 'MIKE', 'BOB', 'JANE']
+
+    //fliter()
+    let words = ['cat', 'dog', 'elephant', 'fish', 'giraffe'];
+    let wordsWithFourLetters = words.filter(word =>word.length === 4);
+    console.log(wordsWithFourLetters); // ['fish']
+
+    //map()
+    const capitalizedWords = words.map(word =>word.toUpperCase());
+    console.log(capitalizedWords); 
+
+    const fruits = ["apple", "banana"];
+    const colors = ["red", "yellow"];
+    const fruitColors = fruits.map((fruit, index) => fruit + "-" + colors[index]);
+    console.log(fruitColors); // ["apple-red", "banana-yellow"]
+
+    //reduce()
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+    console.log(sum); // 15
+    
+    //ctrl + shift + space click to show parameters
+    //numbers.reduce()
+
+    let largest = numbers.reduce((accumulator, currentValue) => {
+        console.log(accumulator,currentValue);
+    return Math.max(accumulator, currentValue);
+    });
+    console.log(largest); 
+
+
+    let people = [
+    { name: 'Rakesh', age: 25, city: 'Chennai' },
+    { name: 'Raj', age: 30, city: 'Salem' },
+    { name: 'Sara', age: 35, city: 'Chennai' }
+    ];
+
+    let groupedByCity = people.reduce((accumulator, currentValue) => {
+        console.log(accumulator, currentValue);
+    if (currentValue.city in accumulator) 
+    {
+        console.log(currentValue.city, accumulator);
+        accumulator[currentValue.city].push(currentValue);
+        console.log(accumulator[currentValue.city])
+    } 
+    else 
+    {
+        accumulator[currentValue.city] = [currentValue];
+        console.log(accumulator);
+    }
+    return accumulator;
+    }, {});
+
+    console.log(groupedByCity); 
+
+    </script>
+</body>
+</html>

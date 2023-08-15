@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> call, apply, and bind Methods</title>
+</head>
+<body>
+    <script>
+        const obj1 = {name:"sakthi"}
+
+        function add(val1,val2){
+            console.log("my name is "+this.name,val1+val2);
+            console.log(`my name is ${this.name} ${val1+val2}`);
+        }
+        add.call(obj1,24,34)
+        add.apply(obj1,[34,12])
+
+        const obj2 = {
+            f1:function(a,b,c){
+                console.log(this.name,a,b,c)
+            }
+        }
+        obj2.f1.call(obj1,"welcome to","javascript programming")
+        obj2.f1.apply(obj1,["welcome to","javascript programming"])
+        const r = obj2.f1.bind(obj1,"welcome to","javascript programming")
+        r()
+         
+    </script>
+</body>
+</html>

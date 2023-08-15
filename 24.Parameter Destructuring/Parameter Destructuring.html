@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameter Destructuring</title>
+</head>
+<body>
+    <script>
+
+        const person = {name: 'sakthi', age: 21};
+        function sayHello({ name,age }) 
+        {
+            console.log(`Hello, ${name}!`,"your age is "+age);
+        }  
+        sayHello(person); 
+
+
+        const numbers = [1, 2, 3];
+        function add([a, b, c]) 
+        {
+            return a + b + c;
+        }
+        console.log(add(numbers));
+
+
+        const person1 = {name: 'Joes', age: 30, city: 'Salem', country: 'India'};
+        function sayHello1({name, age ,...rest}) 
+        {
+            console.log (`Hello, ${name}! You are ${age} years old`);
+            console.log(rest);
+        }
+        sayHello1(person1);
+
+        
+    </script>
+</body>
+</html>

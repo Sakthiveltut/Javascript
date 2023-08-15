@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+    <script>
+        const studentMethod = {
+            about: function () {
+              return `${this.fullName} is from ${this.city}`;
+            },
+            eligibility: function () {
+              return this.age>= 18;
+            },
+          };
+          
+          function addStudent(fullName, father, age, address, city) {
+            const user = Object.create(studentMethod);
+          user.fullName = fullName;
+          user.father = father;
+          user.age = age;
+          user.age = age;
+          user.address = address;
+          user.city = city;
+            return user;
+          }
+          
+          console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem"));
+          console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem").about());
+          console.log(addStudent("Sam", "Raja", 25, "Gandhi Road", "Salem").eligibility());
+          
+
+          let user = {
+            name:'anonymous',
+            pageAccess:['login','dashboard','contact'],
+
+            set setName(name){
+              this.name = name
+            },
+            get getName(){
+              return this.name
+            }
+          }
+
+          let admin = {
+            __proto__:user,
+            isAdmin:'true'
+          }
+
+          admin.setName = 'admin'
+          user.setName = "sakthi"
+
+          console.log(admin);
+          console.log(user);
+
+    </script>
+</body>
+</html>

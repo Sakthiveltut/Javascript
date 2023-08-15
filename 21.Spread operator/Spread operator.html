@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        
+        //spread operator
         const originalArray = [1, 2, 3, 4, 5];
         const newArray = [...originalArray];
         console.log(newArray); // [1, 2, 3, 4, 5]
@@ -21,6 +21,15 @@
         const obj2 = {c: 3, d: 4};
         const mergedObject = {...obj1, ...obj2};
         console.log(mergedObject); // {a: 1, b: 2, c: 3, d: 4}
+
+
+        //rest parameter function
+        function myFunction(first, second, ...rest) {
+            console.log(first);
+            console.log(second);
+            console.log(rest);
+          }
+          myFunction(56,34,232,34,65.567,5656,343)
 
     </script>
 </body>

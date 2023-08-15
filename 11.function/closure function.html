@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure function</title>
+</head>
+<body>
+    <script>
+        function outerFunction(x) {
+            return function innerFunction(y) {
+              return x + y;
+            }
+          }
+          const addFive = outerFunction(5);
+          console.log(addFive(3));
+
+          
+          function createCounter() {
+            let count = 0;
+            return function() {
+              return count++;
+            }
+          }
+          const counter = createCounter();
+          console.log(counter()); // 0
+          console.log(counter()); // 1
+          console.log(counter()); // 2
+          console.dir(createCounter())
+
+
+          function outerScopeFunction(){
+            var outerValue=10;
+            var innerScopeFunction=function(){
+                console.log(outerValue+2);
+            }
+            return innerScopeFunction
+          }
+          const value = outerScopeFunction()
+          value()
+    </script>
+</body>
+</html>
