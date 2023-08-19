@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Methods and Properties</title>
+</head>
+<body>
+    <script>
+        //static method
+        class MyClass1 {
+            static myStaticMethod() {
+          console.log('Hello from a static method!');
+            }
+          }
+          
+          MyClass1.myStaticMethod();
+
+          //static property
+          class MyClass2 {
+            static myStaticProperty = 'Hello from a static property!';
+          }
+          
+          console.log(MyClass2.myStaticProperty);
+
+          //Utility Class
+          class MathUtils {
+            static add(a, b) {
+              return a + b;
+            }
+          
+            static subtract(a, b) {
+              return a - b;
+            }
+          
+            static multiply(a, b) {
+              return a * b;
+            }
+          
+            static divide(a, b) {
+              return a / b;
+            }
+          }
+          
+          console.log(MathUtils.add(2, 3)); // Output: 5
+          console.log(MathUtils.multiply(4, 5)); // Output: 20
+    </script>
+</body>
+</html>
