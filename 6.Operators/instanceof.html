@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instanceof </title>
+</head>
+<body>
+    <script>
+
+class MyClass {
+    constructor() {
+      this.property = 'sakthi';
+    }
+  }
+  
+  class AnotherClass{}
+  
+  const myInstance = new MyClass();
+  
+  console.log(myInstance instanceof MyClass); // Output: true
+  
+  console.log(myInstance instanceof AnotherClass); // Output: false
+  
+
+  const myArray = [1, 2, 3];
+  console.log(myArray instanceof Array); // Output: true
+  
+
+  const myString = 'hello';
+  console.log(myString instanceof String); // Output: false
+  
+
+  const myStringObject = new String('world');
+  console.log(myStringObject instanceof String); // Output: true
+  
+    </script>
+</body>
+</html>

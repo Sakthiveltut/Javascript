@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+<body>
+    <script>
+        //Creating Sets:
+        const studentMark = new Set([78,45,33,234,33,321])
+
+        //Adding and Removing Values:
+        studentMark.add(100)
+        console.log(studentMark.has(100));
+        studentMark.delete(100)
+
+        //Checking Set Size:
+        console.log(studentMark.size);
+
+        //Checking for Values:
+        console.log(studentMark.has(100));
+        console.log(studentMark);
+
+        //Iterating Over Sets:
+        studentMark.forEach(value=>console.log(value))
+
+        //Converting Sets to Arrays:
+        const arr = [...studentMark]
+        console.log(arr);
+
+        //entries()
+        const set = new Set(['apple','banana','cherry'])
+        const iterator1 = set.entries()
+        console.log(iterator1.next().value);
+        console.log(iterator1.next().value);
+        console.log(iterator1.next().value);
+
+        const iterator2 = set.keys()
+        console.log(iterator2.next().value);
+        console.log(iterator2.next().value);
+        console.log(iterator2.next().value);
+
+        //create copy set
+        const arr1 = [1, 2, 3, 3, 4, 5, 5];
+        const newSet = new Set(arr1)
+        console.log(newSet); 
+
+        const str = 'hello';
+        const set1 = new Set(str);
+        console.log(set1); // Output: Set {'h', 'e', 'l', 'o'}
+
+        //instanceof
+        const set2 = new Set([1, 2, 3]);
+        console.log(set2 instanceof Set); // Output: true
+        const arr2 = [1, 2, 3];
+        console.log(arr2 instanceof Set); // Output: false
+
+        class tagsInput{
+            constructor(){
+                var tags;
+                this.tags = new Set()
+            }
+            addTag(newTag){
+                this.tags.add(newTag)
+                console.log(this.tags);
+            }
+        }
+
+        const input = new tagsInput()
+        input.addTag("sakthi")
+        input.addTag("sakthi")
+        input.addTag("sakthi")
+        input.addTag("sakthi")
+
+    </script>
+</body>
+</html>
